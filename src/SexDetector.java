@@ -8,10 +8,11 @@ public class SexDetector {
         Detector detector = new Detector();
 
         List<String> names = provider.getNames();
-        names.forEach((name) -> {
-            Sex detected = detector.getFromName(name);
-            System.out.println(detected);
-        });
+        for (int i = 0; i < names.size(); i++) {
+            String name = names.get(i);
+            Sex sex = detector.getFromName(name);
+            System.out.println(sex);
+        }
     }
 
 }
