@@ -1,3 +1,4 @@
+import com.sun.istack.internal.Nullable;
 import com.sun.xml.internal.ws.util.StringUtils;
 
 public class Person {
@@ -7,7 +8,8 @@ public class Person {
         this.name = name;
     }
 
-    public String getFullName() {
-        return StringUtils.capitalize(name);
+    public void sayHi() {
+        if (name == null) throw new NullPointerException();
+        System.out.println(name + " : Hi!");
     }
 }
