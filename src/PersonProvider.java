@@ -11,7 +11,7 @@ public class PersonProvider {
             new Person("Alexey"),
             new Person("Vasiliy"),
             new Person("Nikolay"),
-            new Person(null)
+            new Person(null /* No name, sorry   */)
     );
 
     private int index = 0;
