@@ -22,7 +22,7 @@ public class PersonProvider {
     
     @Nullable
     public Person next() {
-        return persons.get(index);
+        return persons.get(index++);
     }
 
 
