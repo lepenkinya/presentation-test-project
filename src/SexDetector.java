@@ -4,15 +4,15 @@ public class SexDetector {
 
     public static void main(String[] args) {
 
-        NameProvider provider = new NameProvider();
-        Detector detector = new Detector();
+        PersonProvider provider = new PersonProvider();
 
-        List<String> names = provider.getNames();
-        for (int i = 0; i < names.size(); i++) {
-            String name = names.get(i);
-            Sex sex = detector.getFromName(name);
-            System.out.println(sex);
+        List<Person> persons = provider.getPersons();
+
+        for (Person person : persons) {
+            String fullName = person.getFullName();
+            System.out.println(fullName);
         }
+
     }
 
 }
